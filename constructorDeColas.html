@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+<script>
+function Queue(){
+  this.dataStore = Array.prototype.slice.call(arguments,0);
+  this.enqueue=enqueue;
+  this.dequeue=dequeue;
+  this.empty=empty;
+  this.print = print;
+  function enqueue(element){
+    this.dataStore.push(element);
+  }
+  function dequeue(element){
+    return this.dataStore.shift();
+  }
+  function empty(){
+    return this.datastore.length ==0;
+  }
+  function print(element){
+    document.write(this.dataStore);
+  }
+}
+var nombre = [];
+var nombreCola = new Queue ();
+for (var  i=0 ; i<=5 ; i++){
+var nombreIngreso = prompt("dime" +"-"+ i +""+"nombre");
+  nombreCola.enqueue(nombreIngreso);
+
+}
+nombreCola.print();
+ var apellidoCola= new Queue();
+ for (var  i=0 ; i<=5 ; i++){
+ var apellidoIngreso = prompt("      "+"dime" +"-"+ i +"-"+"apellido");
+  apellidoCola.enqueue(apellidoIngreso);
+</script>
+  </body>
+</html>

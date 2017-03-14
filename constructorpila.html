@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    function  stack(){
+    var items  = [];
+
+  this.push = function(element){
+  items.push(element);
+  };
+   this.pop = function(){
+    return items.pop();
+  };
+  this.peek = function(){
+  return items[items.length-1];
+  };
+  this.isEmpty= function(){
+    return items.length ==0;
+  };
+  this.size = function(){
+    return items.length;
+  };
+  this.clear = function(){
+ items=[];
+ };
+ this.print = function(){
+ document.write(items.toString());
+  };
+}
+
+var nombre = [];
+var nombrePila= new stack();
+for (var  i=0 ; i<=5 ; i++){
+var nombreIngreso = prompt("dime" +"-"+ i +""+"nombre");
+  nombrePila.push(nombreIngreso);
+
+}
+nombrePila.print();
+ var apellidoPila= new stack();
+ for (var  i=0 ; i<=5 ; i++){
+ var apellidoIngreso = prompt("      "+"dime" +"-"+ i +"-"+"apellido");
+  apellidoPila.push(apellidoIngreso);
+
+}
+
+apellidoPila.print();
+ for (var  i=0 ; i<=5 ; i++){
+   nombre.push(nombrePila.pop() +""+  apellidoPila.pop());
+ }
+document.write (nombre);
+
+    </script>
+  </body>
+</html>
